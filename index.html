@@ -7,13 +7,11 @@
 <title>Para mi preciosa</title>
 
 <style>
-*{
-    box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
     margin:0;
-    font-family:'Comic Sans MS', cursive, sans-serif;
+    font-family:'Comic Sans MS',cursive,sans-serif;
     background:linear-gradient(135deg,#e7f3f8,#fcecf2,#f8f1e8);
     color:#686868;
     text-align:center;
@@ -29,10 +27,10 @@ body{
     max-width:700px;
     margin:auto;
     padding:30px 24px;
-    background:rgba(255,255,255,0.94);
+    background:rgba(255,255,255,.94);
     border:1px solid #eedfe5;
     border-radius:30px;
-    box-shadow:0 8px 25px rgba(120,110,120,0.13);
+    box-shadow:0 8px 25px rgba(120,110,120,.13);
 }
 
 h1{
@@ -58,12 +56,7 @@ button{
     border-radius:25px;
     cursor:pointer;
     margin:8px;
-    transition:0.3s;
     font-family:inherit;
-}
-
-button:hover{
-    transform:scale(1.05);
 }
 
 .si{
@@ -90,20 +83,16 @@ button:hover{
     display:none;
 }
 
-.rainbow-portada{
-    width:230px;
-    max-width:75%;
-    margin:5px auto 10px;
-    display:block;
-    border-radius:20px;
-}
-
-.rainbow-carta{
+.rainbow{
     width:250px;
     max-width:80%;
     margin:10px auto 20px;
     display:block;
     border-radius:20px;
+}
+
+.portada{
+    width:230px;
 }
 
 .carta-texto{
@@ -122,7 +111,7 @@ button:hover{
     margin:20px auto;
     border-radius:22px;
     border:5px solid #f8edf1;
-    box-shadow:0 6px 18px rgba(120,110,120,0.15);
+    box-shadow:0 6px 18px rgba(120,110,120,.15);
 }
 
 .separador{
@@ -136,35 +125,18 @@ button:hover{
     font-weight:bold;
     font-size:20px;
 }
-
-.aparecer{
-    animation:aparecer 1s ease;
-}
-
-@keyframes aparecer{
-    from{
-        opacity:0;
-        transform:translateY(15px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
 </style>
-
 </head>
 
 <body>
 
 <div class="container" id="inicio">
 
-<div class="card aparecer">
+<div class="card">
 
 <img
-class="rainbow-portada"
-src="IMG_9145.jpeg"
+class="rainbow portada"
+src="https://raw.githubusercontent.com/eliza47712/Mi-bebita/main/IMG_9145.jpeg"
 alt="Rainbow Dash">
 
 <h1>Hola, preciosa</h1>
@@ -187,7 +159,7 @@ alt="Rainbow Dash">
 
 <div class="container">
 
-<div class="card aparecer">
+<div class="card">
 
 <h1>Feliz cumpleaños</h1>
 
@@ -196,8 +168,8 @@ alt="Rainbow Dash">
 <p>Preparé esto con mucho cariño especialmente para ti.</p>
 
 <img
-class="rainbow-carta"
-src="IMG_9146.jpeg"
+class="rainbow"
+src="https://raw.githubusercontent.com/eliza47712/Mi-bebita/main/IMG_9146.jpeg"
 alt="Rainbow Dash">
 
 <button class="si" onclick="mostrarCarta()">
@@ -224,10 +196,9 @@ Mi preciosa, Feliz cumpleaños!, la verdad queria hacerte un detallito, pues aun
 
 <h2>Algunas de mis fotos favoritas</h2>
 
-
 <img
 class="foto"
-src="40CAF6D6-709B-4409-8D68-89DB5BE63284.jpeg"
+src="https://raw.githubusercontent.com/eliza47712/Mi-bebita/main/40CAF6D6-709B-4409-8D68-89DB5BE63284.jpeg"
 alt="Foto de recuerdo">
 
 <p>Desde siempre has sido una cosita preciosa.</p>
@@ -235,7 +206,7 @@ alt="Foto de recuerdo">
 
 <img
 class="foto"
-src="2964B913-6AE0-4B47-A14A-0A7A190CE474.jpeg"
+src="https://raw.githubusercontent.com/eliza47712/Mi-bebita/main/2964B913-6AE0-4B47-A14A-0A7A190CE474.jpeg"
 alt="Foto de recuerdo">
 
 <p>Y sigues siendo igual de adorable.</p>
@@ -243,7 +214,7 @@ alt="Foto de recuerdo">
 
 <img
 class="foto"
-src="E1E191A96-2946-4269-88D3-9FDE8610439F.jpeg"
+src="https://raw.githubusercontent.com/eliza47712/Mi-bebita/main/E1E191A96-2946-4269-88D3-9FDE8610439F.jpeg"
 alt="Foto de recuerdo">
 
 <p>Mi favorita eres tú, en cualquiera de tus versiones.</p>
@@ -271,12 +242,11 @@ Te amo muchísimo, mi preciosa.
 Feliz cumpleaños.
 </p>
 
-
 <div class="separador">♡</div>
 
 <img
-class="rainbow-carta"
-src="IMG_9147.jpeg"
+class="rainbow"
+src="https://raw.githubusercontent.com/eliza47712/Mi-bebita/main/IMG_9147.jpeg"
 alt="Rainbow Dash">
 
 </div>
@@ -290,53 +260,51 @@ alt="Rainbow Dash">
 
 <script>
 
-let contador = 0;
+let contador=0;
 
 function respuestaNo(){
 
-    contador++;
+contador++;
 
-    if(contador == 1){
+if(contador==1){
 
-        document.getElementById("mensaje").innerHTML =
-        "Por favor... me esforcé mucho en esta sorpresa.";
+document.getElementById("mensaje").innerHTML=
+"Por favor... me esforcé mucho en esta sorpresa.";
 
-    } else if(contador == 2){
+}else if(contador==2){
 
-        document.getElementById("mensaje").innerHTML =
-        "Creo que te va a gustar.";
+document.getElementById("mensaje").innerHTML=
+"Creo que te va a gustar.";
 
-    } else if(contador == 3){
+}else if(contador==3){
 
-        document.getElementById("mensaje").innerHTML =
-        "Ándale, preciosa...";
+document.getElementById("mensaje").innerHTML=
+"Ándale, preciosa...";
 
-    } else {
+}else{
 
-        document.getElementById("mensaje").innerHTML =
-        "Solo abre la sorpresa, por favor.";
+document.getElementById("mensaje").innerHTML=
+"Solo abre la sorpresa, por favor.";
 
-    }
 }
 
+}
 
 function abrirSorpresa(){
 
-    document.getElementById("inicio").style.display="none";
+document.getElementById("inicio").style.display="none";
 
-    document.getElementById("sorpresa").style.display="block";
+document.getElementById("sorpresa").style.display="block";
 
 }
 
-
 function mostrarCarta(){
 
-    document.getElementById("carta").style.display="block";
+document.getElementById("carta").style.display="block";
 
 }
 
 </script>
 
 </body>
-
 </html
