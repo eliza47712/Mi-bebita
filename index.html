@@ -1,235 +1,342 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Para mi preciosa 💙</title>
+<title>Para mi preciosa</title>
 
 <style>
+*{
+    box-sizing:border-box;
+}
 
 body{
-margin:0;
-font-family:'Comic Sans MS',sans-serif;
-background:linear-gradient(#b8e9ff,#ffd6ec);
-text-align:center;
-overflow-x:hidden;
+    margin:0;
+    font-family:'Comic Sans MS', cursive, sans-serif;
+    background:linear-gradient(135deg,#e7f3f8,#fcecf2,#f8f1e8);
+    color:#686868;
+    text-align:center;
+    overflow-x:hidden;
 }
 
 .container{
-padding:30px;
-}
-
-h1{
-color:#ff5fa2;
-}
-
-h2{
-color:#4a6fff;
-}
-
-button{
-padding:15px 30px;
-font-size:18px;
-border:none;
-border-radius:25px;
-cursor:pointer;
-margin:10px;
-transition:.3s;
-}
-
-.si{
-background:#7ed6ff;
-color:white;
-}
-
-.no{
-background:#ff9cb8;
-color:white;
+    padding:35px 15px;
 }
 
 .card{
-background:white;
-width:90%;
-max-width:700px;
-margin:auto;
-padding:25px;
-border-radius:25px;
-box-shadow:0 0 15px rgba(0,0,0,.15);
+    width:92%;
+    max-width:700px;
+    margin:auto;
+    padding:30px 24px;
+    background:rgba(255,255,255,0.94);
+    border:1px solid #eedfe5;
+    border-radius:30px;
+    box-shadow:0 8px 25px rgba(120,110,120,0.13);
 }
 
-img{
-max-width:300px;
-width:90%;
-border-radius:20px;
-margin:15px;
-box-shadow:0 0 15px rgba(255,105,180,.4);
+h1{
+    color:#c58fa8;
+    font-size:31px;
+    margin-bottom:15px;
 }
 
-#sorpresa{
-display:none;
-}
-
-#carta{
-display:none;
-margin-top:20px;
+h2{
+    color:#91a9c7;
+    font-size:24px;
 }
 
 p{
-line-height:1.8;
-font-size:18px;
+    line-height:1.85;
+    font-size:18px;
 }
 
+button{
+    padding:14px 29px;
+    font-size:17px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    margin:8px;
+    transition:0.3s;
+    font-family:inherit;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.si{
+    background:#b8d9e8;
+    color:white;
+}
+
+.no{
+    background:#e5b8c7;
+    color:white;
+}
+
+#mensaje{
+    color:#b88fa1;
+    min-height:30px;
+    font-size:18px;
+}
+
+#sorpresa{
+    display:none;
+}
+
+#carta{
+    display:none;
+}
+
+.rainbow-portada{
+    width:230px;
+    max-width:75%;
+    margin:5px auto 10px;
+    display:block;
+    border-radius:20px;
+}
+
+.rainbow-carta{
+    width:250px;
+    max-width:80%;
+    margin:10px auto 20px;
+    display:block;
+    border-radius:20px;
+}
+
+.carta-texto{
+    background:#fff8fa;
+    border:1px solid #f1dfe5;
+    border-radius:22px;
+    padding:22px;
+    text-align:left;
+}
+
+.foto{
+    display:block;
+    width:min(90%,320px);
+    max-height:430px;
+    object-fit:cover;
+    margin:20px auto;
+    border-radius:22px;
+    border:5px solid #f8edf1;
+    box-shadow:0 6px 18px rgba(120,110,120,0.15);
+}
+
+.separador{
+    margin:28px 0;
+    color:#c8a9b7;
+    font-size:24px;
+}
+
+.final{
+    color:#c58fa8;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.aparecer{
+    animation:aparecer 1s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 </style>
+
 </head>
+
 <body>
 
 <div class="container" id="inicio">
 
-<div class="card">
+<div class="card aparecer">
 
-<h1>🌈 Hola preciosa 💖</h1>
+<img
+class="rainbow-portada"
+src="IMG_9145.jpeg"
+alt="Rainbow Dash">
 
-<p>
-Rainbow Dash tiene algo muy especial para ti...
-</p>
+<h1>Hola, preciosa</h1>
 
-<p>
-¿Quieres abrir tu sorpresa?
-</p>
+<p>Rainbow Dash tiene algo especial preparado para ti.</p>
 
-<button class="si" onclick="abrirSorpresa()">
-Sí 💗
-</button>
+<p>¿Quieres abrir tu sorpresa?</p>
 
-<button class="no" onclick="respuestaNo()">
-No 💧
-</button>
+<button class="si" onclick="abrirSorpresa()">Sí</button>
+
+<button class="no" onclick="respuestaNo()">No</button>
 
 <h2 id="mensaje"></h2>
 
 </div>
-
 </div>
+
 
 <div id="sorpresa">
 
 <div class="container">
 
-<div class="card">
+<div class="card aparecer">
 
-<h1>🎂 ¡Feliz cumpleaños! 🎂</h1>
+<h1>Feliz cumpleaños</h1>
 
-<p>
-Rainbow Dash estaba segurísima de que aceptarías. 🌈💙
-</p>
+<p>Sabía que aceptarías.</p>
 
-<p>
-Hay alguien que te ama muchísimo y preparó esto especialmente para ti.
-</p>
+<p>Preparé esto con mucho cariño especialmente para ti.</p>
+
+<img
+class="rainbow-carta"
+src="IMG_9146.jpeg"
+alt="Rainbow Dash">
 
 <button class="si" onclick="mostrarCarta()">
-💌 Abrir carta
+Abrir carta
 </button>
+
 
 <div id="carta">
 
-<h2>💖 Para mi preciosa 💖</h2>
+<div class="separador">♡</div>
+
+<h2>Para mi preciosa</h2>
+
+<div class="carta-texto">
 
 <p>
-
 Mi preciosa, Feliz cumpleaños!, la verdad queria hacerte un detallito, pues aun que no llevamos mucho tiempo juntas, mi corazoncito esta rendido por tus encantos, quiero decirte que aun que dudes de mi amor por ti mil veces, yo me encargare de demostrar mil y un veces lo mucho que te amo, mi vida, hoy que cumples años Es un dia especial, pues de alguna u otra forma, me permites estar a tu lado y acompañarte en dias especiales, quiero agradecerte por siempre estar a mi lado mi bebita, te amo muchisimo, y quiero que te quede muy muy claro, que en mi corazón solo estas tu, y nadie mas, mis ojos solo te ven a ti, no importa que, no importa si alguien mas lo intenta, no le dare siquiera la oportunidad de hablar con otras intenciones de inmediato lo bloqueare, por que si no eres tu mi amor; entonces no vale la pena, te amo mi bebita, disfruta mucho muchote tu cumpleaños.☹️💧💗
-
 </p>
 
-<h2>📸 Algunas de mis fotos favoritas 💛</h2>
+</div>
 
-foto1.jpg
+
+<div class="separador">♡</div>
+
+<h2>Algunas de mis fotos favoritas</h2>
+
+
+<img
+class="foto"
+src="40CAF6D6-709B-4409-8D68-89DB5BE63284.jpeg"
+alt="Foto de recuerdo">
+
+<p>Desde siempre has sido una cosita preciosa.</p>
+
+
+<img
+class="foto"
+src="2964B913-6AE0-4B47-A14A-0A7A190CE474.jpeg"
+alt="Foto de recuerdo">
+
+<p>Y sigues siendo igual de adorable.</p>
+
+
+<img
+class="foto"
+src="E1E191A96-2946-4269-88D3-9FDE8610439F.jpeg"
+alt="Foto de recuerdo">
+
+<p>Mi favorita eres tú, en cualquiera de tus versiones.</p>
+
+
+<div class="separador">♡</div>
+
+<h2>Un último mensaje</h2>
 
 <p>
-Desde siempre has sido una cosita preciosa. 🍦💖
-</p>
-
-foto2.jpg
-
-<p>
-Y sigues siendo igual de adorable. 🥹💗
-</p>
-
-foto3.jpg
-
-<p>
-Mi favorita eres tú, en cualquiera de tus versiones. 🌈💕
-</p>
-
-<h2>🎁 Mensaje final 🎁</h2>
-
-<p>
-
 Gracias por permitirme acompañarte en un día tan especial.
-
-Espero que tu cumpleaños esté lleno de momentos bonitos, sonrisas y mucho amor.
-
-Y aunque llevemos poco tiempo juntas, quiero que sepas que eres una persona muy importante para mí.
-
-Te amo muchísimo, mi preciosa. 💖
-
-🌈 Feliz cumpleaños 🌈
-
 </p>
 
-</div>
+<p>
+Espero que tu cumpleaños esté lleno de momentos bonitos, sonrisas y mucho amor.
+</p>
+
+<p>
+Y aunque llevemos poco tiempo juntas, quiero que sepas que eres una persona muy importante para mí.
+</p>
+
+<p class="final">
+Te amo muchísimo, mi preciosa.
+<br><br>
+Feliz cumpleaños.
+</p>
+
+
+<div class="separador">♡</div>
+
+<img
+class="rainbow-carta"
+src="IMG_9147.jpeg"
+alt="Rainbow Dash">
 
 </div>
 
 </div>
 
 </div>
+
+</div>
+
 
 <script>
 
-let contador=0;
+let contador = 0;
 
 function respuestaNo(){
 
-contador++;
+    contador++;
 
-if(contador==1){
-document.getElementById("mensaje").innerHTML=
-"🥺 Por favor... me esforcé mucho en esta sorpresa.";
+    if(contador == 1){
+
+        document.getElementById("mensaje").innerHTML =
+        "Por favor... me esforcé mucho en esta sorpresa.";
+
+    } else if(contador == 2){
+
+        document.getElementById("mensaje").innerHTML =
+        "Creo que te va a gustar.";
+
+    } else if(contador == 3){
+
+        document.getElementById("mensaje").innerHTML =
+        "Ándale, preciosa...";
+
+    } else {
+
+        document.getElementById("mensaje").innerHTML =
+        "Solo abre la sorpresa, por favor.";
+
+    }
 }
 
-else if(contador==2){
-document.getElementById("mensaje").innerHTML=
-"🌈 Estoy segura de que te va a gustar.";
-}
-
-else if(contador==3){
-document.getElementById("mensaje").innerHTML=
-"💖 Ándale, preciosa...";
-}
-
-else{
-document.getElementById("mensaje").innerHTML=
-"😭 Rainbow Dash insiste en que abras la sorpresa.";
-}
-
-}
 
 function abrirSorpresa(){
 
-document.getElementById("inicio").style.display="none";
-document.getElementById("sorpresa").style.display="block";
+    document.getElementById("inicio").style.display="none";
+
+    document.getElementById("sorpresa").style.display="block";
 
 }
 
+
 function mostrarCarta(){
 
-document.getElementById("carta").style.display="block";
+    document.getElementById("carta").style.display="block";
 
 }
 
 </script>
 
 </body>
-</html>
+
+</html
