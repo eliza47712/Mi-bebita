@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para mi preciosa 💙</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Comic Sans MS',sans-serif;
+background:linear-gradient(#b8e9ff,#ffd6ec);
+text-align:center;
+overflow-x:hidden;
+}
+
+.container{
+padding:30px;
+}
+
+h1{
+color:#ff5fa2;
+}
+
+h2{
+color:#4a6fff;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+margin:10px;
+transition:.3s;
+}
+
+.si{
+background:#7ed6ff;
+color:white;
+}
+
+.no{
+background:#ff9cb8;
+color:white;
+}
+
+.card{
+background:white;
+width:90%;
+max-width:700px;
+margin:auto;
+padding:25px;
+border-radius:25px;
+box-shadow:0 0 15px rgba(0,0,0,.15);
+}
+
+img{
+max-width:300px;
+width:90%;
+border-radius:20px;
+margin:15px;
+box-shadow:0 0 15px rgba(255,105,180,.4);
+}
+
+#sorpresa{
+display:none;
+}
+
+#carta{
+display:none;
+margin-top:20px;
+}
+
+p{
+line-height:1.8;
+font-size:18px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container" id="inicio">
+
+<div class="card">
+
+<h1>🌈 Hola preciosa 💖</h1>
+
+<p>
+Rainbow Dash tiene algo muy especial para ti...
+</p>
+
+<p>
+¿Quieres abrir tu sorpresa?
+</p>
+
+<button class="si" onclick="abrirSorpresa()">
+Sí 💗
+</button>
+
+<button class="no" onclick="respuestaNo()">
+No 💧
+</button>
+
+<h2 id="mensaje"></h2>
+
+</div>
+
+</div>
+
+<div id="sorpresa">
+
+<div class="container">
+
+<div class="card">
+
+<h1>🎂 ¡Feliz cumpleaños! 🎂</h1>
+
+<p>
+Rainbow Dash estaba segurísima de que aceptarías. 🌈💙
+</p>
+
+<p>
+Hay alguien que te ama muchísimo y preparó esto especialmente para ti.
+</p>
+
+<button class="si" onclick="mostrarCarta()">
+💌 Abrir carta
+</button>
+
+<div id="carta">
+
+<h2>💖 Para mi preciosa 💖</h2>
+
+<p>
+
+Mi preciosa, Feliz cumpleaños!, la verdad queria hacerte un detallito, pues aun que no llevamos mucho tiempo juntas, mi corazoncito esta rendido por tus encantos, quiero decirte que aun que dudes de mi amor por ti mil veces, yo me encargare de demostrar mil y un veces lo mucho que te amo, mi vida, hoy que cumples años Es un dia especial, pues de alguna u otra forma, me permites estar a tu lado y acompañarte en dias especiales, quiero agradecerte por siempre estar a mi lado mi bebita, te amo muchisimo, y quiero que te quede muy muy claro, que en mi corazón solo estas tu, y nadie mas, mis ojos solo te ven a ti, no importa que, no importa si alguien mas lo intenta, no le dare siquiera la oportunidad de hablar con otras intenciones de inmediato lo bloqueare, por que si no eres tu mi amor; entonces no vale la pena, te amo mi bebita, disfruta mucho muchote tu cumpleaños.☹️💧💗
+
+</p>
+
+<h2>📸 Algunas de mis fotos favoritas 💛</h2>
+
+foto1.jpg
+
+<p>
+Desde siempre has sido una cosita preciosa. 🍦💖
+</p>
+
+foto2.jpg
+
+<p>
+Y sigues siendo igual de adorable. 🥹💗
+</p>
+
+foto3.jpg
+
+<p>
+Mi favorita eres tú, en cualquiera de tus versiones. 🌈💕
+</p>
+
+<h2>🎁 Mensaje final 🎁</h2>
+
+<p>
+
+Gracias por permitirme acompañarte en un día tan especial.
+
+Espero que tu cumpleaños esté lleno de momentos bonitos, sonrisas y mucho amor.
+
+Y aunque llevemos poco tiempo juntas, quiero que sepas que eres una persona muy importante para mí.
+
+Te amo muchísimo, mi preciosa. 💖
+
+🌈 Feliz cumpleaños 🌈
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+let contador=0;
+
+function respuestaNo(){
+
+contador++;
+
+if(contador==1){
+document.getElementById("mensaje").innerHTML=
+"🥺 Por favor... me esforcé mucho en esta sorpresa.";
+}
+
+else if(contador==2){
+document.getElementById("mensaje").innerHTML=
+"🌈 Estoy segura de que te va a gustar.";
+}
+
+else if(contador==3){
+document.getElementById("mensaje").innerHTML=
+"💖 Ándale, preciosa...";
+}
+
+else{
+document.getElementById("mensaje").innerHTML=
+"😭 Rainbow Dash insiste en que abras la sorpresa.";
+}
+
+}
+
+function abrirSorpresa(){
+
+document.getElementById("inicio").style.display="none";
+document.getElementById("sorpresa").style.display="block";
+
+}
+
+function mostrarCarta(){
+
+document.getElementById("carta").style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
